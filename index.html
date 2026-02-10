@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>УМНОжайка - Учим таблицу умножения</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Fredoka', 'sans-serif'],
+            },
+            colors: {
+              primary: '#9B51E0',    // Bright Purple (Playful, creative)
+              secondary: '#27AE60',  // Vibrant Green (Safe, positive)
+              accent: '#F2994A',     // Orange (Energetic)
+              info: '#2D9CDB',       // Blue (Calm)
+              danger: '#EB5757',     // Soft Red
+              background: '#FDF6E3', // Warm Cream
+              surface: '#FFFFFF',
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            },
+            boxShadow: {
+              'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+              'card': '0 10px 30px -5px rgba(155, 81, 224, 0.15)',
+              'button': '0 8px 0 0 rgba(0,0,0,0.1)',
+              'button-hover': '0 12px 0 0 rgba(0,0,0,0.1)',
+              'button-active': '0 0 0 0 rgba(0,0,0,0.1)',
+            },
+            borderRadius: {
+              'xl': '1.5rem',
+              '2xl': '2rem',
+              '3xl': '3rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FDF6E3;
+        background-image: 
+          radial-gradient(#F2994A 3px, transparent 3px), 
+          radial-gradient(#9B51E0 3px, transparent 3px);
+        background-size: 60px 60px;
+        background-position: 0 0, 30px 30px;
+      }
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+      @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
